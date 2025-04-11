@@ -4,6 +4,12 @@
   object-fit: cover;
 }
 
+.card__title {
+  margin: 0;
+  font-size: 20px;
+  line-height: 1.2;
+}
+
 .card__like-button {
   background-image: url(..//images/heart.svg);
   width: 23px;
@@ -11,19 +17,30 @@
   border: none;
   background-color: transparent;
   opacity: 40%;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .card__like-button:hover {
+  opacity: 1;
+  cursor: pointer;
 }
 
 .card__content {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin-top: 12px;
 }
 
 @media screen and (max-width: 627px) {
+  card__like-button {
+    width: 20px;
+    height: 18px;
+  }
+
   .card__image {
-    grid-template-columns: repeat(auto-fit, 288px);
+    height: 288px;
   }
 }
