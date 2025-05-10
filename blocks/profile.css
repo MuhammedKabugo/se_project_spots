@@ -61,7 +61,7 @@
   cursor: pointer;
 }
 
-.profile__add-button {
+.profile__new-post-button {
   border: none property;
   margin-left: auto;
   width: 149px;
@@ -77,7 +77,7 @@
   cursor: pointer;
 }
 
-.profile__add-button:hover {
+.profile__new-post-button:hover {
   opacity: 0.8;
 }
 

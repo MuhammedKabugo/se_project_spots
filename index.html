@@ -35,7 +35,7 @@
               <img src="./images/pencil.svg" alt="pencil icon" />Edit profile
             </button>
           </div>
-          <button type="button" class="profile__add-button">
+          <button type="button" class="profile__new-post-button">
             <img src="./images/plus.svg" alt="plus icon" />New post
           </button>
         </section>
@@ -115,7 +115,7 @@
       <footer class="footer">
         <p class="footer__copyright">2025 &copy; Spots</p>
       </footer>
-      <div class="modal modal__is-opened">
+      <div class="modal" id="edit-profile-modal">
         <div class="modal__container">
           <button type="button" class="modal__close-btn">x</button>
           <h2 class="modal__title">Edit profile</h2>
@@ -144,7 +144,7 @@
         </div>
       </div>
 
-      <div class="modal modal__is-opened">
+      <div class="modal" id="new-post-modal">
         <div class="modal__container">
           <button type="button" class="modal__close-btn">
             <img src="./images/close.svg" alt="close icon" />
@@ -175,5 +175,6 @@
         </div>
       </div>
     </div>
+    <script src="./script/index.js"></script>
   </body>
 </html>
