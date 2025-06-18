@@ -12,7 +12,7 @@ const editProfileDescriptionInput = editProfileModal.querySelector(
 
 const newPostBtn = document.querySelector(".profile__new-post-button");
 const newPostModal = document.querySelector("#new-post-modal");
-const editNewPostForm = newPostModal.querySelector(".modal__form");
+const newPostForm = newPostModal.querySelector(".modal__form");
 const newPostCloseBtn = newPostModal.querySelector(".modal__close-btn");
 
 // Update the id
@@ -56,4 +56,4 @@ function handleENewPostSubmit(evt) {
 }
 
 editProfileForm.addEventListener("submit", handleEditProfileSubmit);
-editNewPostForm.addEventListener("submit", handleENewPostSubmit);
+newPostForm.addEventListener("submit", handleENewPostSubmit);
