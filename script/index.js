@@ -18,41 +18,53 @@ const newPostCloseBtn = newPostModal.querySelector(".modal__close-btn");
 // Update the id
 const editNewPostImageInput = newPostForm.querySelector("#card-image-input");
 
-const editNewPostCaptionInput = editProfileModal.querySelector(
+const editNewPostCaptionInput = newPostModal.querySelector(
   "#card-caption-input"
 );
 
 const profileNameEl = document.querySelector(".profile__name");
 const profileDescriptionEl = document.querySelector(".profile__description");
 
+function openModal(modal) {
+  modal.classList.add("modal__is-opened");
+}
+
+function closeModal(modal) {
+  modal.classList.remove("modal__is-opened");
+}
+
 editProfileBtn.addEventListener("click", function () {
   editProfileNameInput.value = profileNameEl.textContent;
   editProfileDescriptionInput.value = profileDescriptionEl.textContent;
-  editProfileModal.classList.add("modal__is-opened");
+  openModal(editProfileModal);
 });
 
 editProfileCloseBtn.addEventListener("click", function () {
-  editProfileModal.classList.remove("modal__is-opened");
+  closeModal(editProfileModal);
 });
 
 newPostBtn.addEventListener("click", function () {
-  newPostModal.classList.add("modal__is-opened");
+  openModal(editProfileModal);
 });
 
 newPostCloseBtn.addEventListener("click", function () {
-  newPostModal.classList.remove("modal__is-opened");
+  closeModal(editProfileModal);
 });
 
 function handleEditProfileSubmit(evt) {
   evt.preventDefault();
   profileNameEl.textContent = editProfileNameInput.value;
-  profileDescriptionEl.textContent = editProfileDecscriptionInput.value;
-  editProfileModal.classList.remove("modal__is-opened");
+  profileDescriptionEl.textContent = editProfileDescriptionInput.value;
+  closeModal(editProfileModal);
 }
 
 function handleENewPostSubmit(evt) {
   evt.preventDefault();
-  console.log(evt);
+  const imageLink = editNewPostImageInput.value;
+  const caption = editNewPostCaptionInput.value;
+
+  console.log("Image Link:", imageLink);
+  console.log("Caption:", caption);
 }
 
 editProfileForm.addEventListener("submit", handleEditProfileSubmit);
