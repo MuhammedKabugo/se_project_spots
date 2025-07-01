@@ -44,11 +44,11 @@ editProfileCloseBtn.addEventListener("click", function () {
 });
 
 newPostBtn.addEventListener("click", function () {
-  openModal(editProfileModal);
+  openModal(newPostModal);
 });
 
 newPostCloseBtn.addEventListener("click", function () {
-  closeModal(editProfileModal);
+  closeModal(newPostModal);
 });
 
 function handleEditProfileSubmit(evt) {
@@ -65,6 +65,7 @@ function handleENewPostSubmit(evt) {
 
   console.log("Image Link:", imageLink);
   console.log("Caption:", caption);
+  closeModal(newPostModal);
 }
 
 editProfileForm.addEventListener("submit", handleEditProfileSubmit);

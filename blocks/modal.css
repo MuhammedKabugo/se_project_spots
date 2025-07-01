@@ -36,8 +36,13 @@
   height: 40px;
   border-style: none;
   background-color: #fff;
+  cursor: pointer;
+}
+
+.modal__close-btn:hover {
   opacity: 0.4;
 }
+
 
 .modal__title {
   margin: 0 0 32px;
@@ -74,4 +79,8 @@
   color: #fcf5e5;
   font-family: Poppins, Arial, Helvetica, sans-serif;
   border-radius: 8px;
+  cursor: pointer;
+}
+.modal__submit-btn:hover{
+  opacity: 0.8;
 }
