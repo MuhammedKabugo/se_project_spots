@@ -15,7 +15,6 @@ const newPostModal = document.querySelector("#new-post-modal");
 const newPostForm = newPostModal.querySelector(".modal__form");
 const newPostCloseBtn = newPostModal.querySelector(".modal__close-btn");
 
-// Update the id
 const editNewPostImageInput = newPostForm.querySelector("#card-image-input");
 
 const editNewPostCaptionInput = newPostModal.querySelector(
